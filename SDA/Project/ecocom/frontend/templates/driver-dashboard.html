@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard - EcoCom</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <style>
+        /* Rating stars styles */
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .rating-stars input {
+            display: none;
+        }
+        .rating-stars label {
+            font-size: 2em;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .rating-stars input:checked ~ label,
+        .rating-stars input:hover ~ label {
+            color: #ffc107;
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .modal-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .modal-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* Additional styles for buttons */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Driver Dashboard</h1>
+            <button id="logout-btn" class="btn">Logout</button>
+        </header>
+
+        
+        <section class="profile-section">
+            <h2>Driver Profile</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <label for="profile-username">Username:</label>
+                    <span id="profile-username">N/A</span>
+                </div>
+                <div class="profile-item">
+                    <label for="profile-name">Name:</label>
+                    <span id="profile-name">N/A</span>
+                </div>
+                <div class="profile-item">
+                    <label for="profile-email">Email:</label>
+                    <span id="profile-email">N/A</span>
+                </div>
+                <div class="profile-item">
+                    <label for="profile-phone">Phone:</label>
+                    <span id="profile-phone">N/A</span>
+                </div>
+                <div class="profile-item">
+                    <label for="profile-car-model">Car Model:</label>
+                    <span id="profile-car-model">N/A</span>
+                </div>
+                <div class="profile-item">
+                    <label for="profile-car-license">Car License:</label>
+                    <span id="profile-car-license">N/A</span>
+                </div>
+                <div class="profile-item">
+                    <label for="profile-seats">Seats Available:</label>
+                    <span id="profile-seats">N/A</span>
+                </div>
+                <div class="profile-item full-width">
+                    <label for="profile-route">Route:</label>
+                    <span id="profile-route">N/A</span>
+                </div>
+                <div class="profile-item full-width">
+                    <label for="profile-schedule">Schedule:</label>
+                    <span id="profile-schedule">N/A</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bookings-section">
+            <h2>Current Bookings</h2>
+            <div id="bookings-list">
+                <!-- Bookings will be dynamically populated here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Container for Cancellation and other dynamic content -->
+    <div id="modal-container"></div>
+    
+    <div id="rider-ratings-list"></div>
+
+    <script src="/static/js/driver-dashboard.js"></script>
+</body>
+</html>

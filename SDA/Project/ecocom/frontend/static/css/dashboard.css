@@ -1,0 +1,206 @@
+/* Modern Color Palette */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-light: #ecf0f1;
+    --text-color: #2c3e50;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Reset and Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--background-light) 0%, #f8f9fa 100%);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.dashboard-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Button Styling */
+.btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+#logout-btn {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+}
+
+#logout-btn:hover {
+    transform: scale(1.05);
+    background-color: #c0392b;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-header {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Profile Section */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.profile-item {
+    background-color: var(--background-light);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-item:hover {
+    transform: translateX(10px);
+    background-color: #f1f3f5;
+}
+
+/* Form Styling */
+.form-control {
+    border-radius: 25px;
+    border: 2px solid var(--secondary-color);
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+}
+
+#search-rides-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#search-rides-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Rides and Bookings List */
+.ride-card, .booking-item {
+    background-color: var(--background-light);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.ride-card:hover, .booking-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.rides-container, .bookings-section {
+    animation: fadeIn 0.5s ease;
+}

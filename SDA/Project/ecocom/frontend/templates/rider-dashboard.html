@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Dashboard - EcoCom</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container container">
+        <header class="d-flex justify-content-between align-items-center my-4">
+            <h1 class="mb-0">Rider Dashboard</h1>
+            <button id="logout-btn" class="btn btn-outline-danger">Logout</button>
+        </header>
+
+        <div id="modal-container"></div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <section class="profile-section card mb-4">
+                    <div class="card-header">
+                        <h2 class="card-title">Rider Profile</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-grid">
+                            <div class="profile-item mb-2">
+                                <strong>Username:</strong>
+                                <span id="rider-username" class="text-muted">N/A</span>
+                            </div>
+                            <div class="profile-item mb-2">
+                                <strong>Name:</strong>
+                                <span id="rider-name" class="text-muted">N/A</span>
+                            </div>
+                            <div class="profile-item mb-2">
+                                <strong>Email:</strong>
+                                <span id="rider-email" class="text-muted">N/A</span>
+                            </div>
+                            <div class="profile-item mb-2">
+                                <strong>Phone:</strong>
+                                <span id="rider-phone" class="text-muted">N/A</span>
+                            </div>
+                            <div class="profile-item mb-2">
+                                <strong>Pickup Location:</strong>
+                                <span id="rider-pickup-location" class="text-muted">N/A</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-8">
+                <section class="search-rides-section card mb-4">
+                    <div class="card-header">
+                        <h2 class="card-title">Search Rides</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="search-rides-form" class="mb-3">
+                            <div class="row">
+                                <div class="col-md-4 mb-2">
+                                    <label for="pickup-location" class="form-label">Pickup Location</label>
+                                    <input type="text" id="pickup-location" class="form-control" required>
+                                </div>
+                                
+                                <div class="col-md-4 mb-2">
+                                    <label for="car-make" class="form-label">Car Make</label>
+                                    <input type="text" id="car-make" class="form-control">
+                                </div>
+                            </div>
+                            <button type="button" id="search-rides-btn" class="btn btn-primary mt-2">Search Rides</button>
+                        </form>
+
+                        <div id="rides-list" class="rides-container">
+                            <!-- Search results will be dynamically populated here -->
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bookings-section card">
+                    <div class="card-header">
+                        <h2 class="card-title">My Bookings</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="bookings-list">
+                            <!-- Current bookings will be dynamically populated -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="text-center mt-4">
+            <p class="text-muted">&copy; 2024 EcoCom Ride Sharing</p>
+        </footer>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="/static/js/rider-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Ride Sharing</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <form id="register-form">
+            <h2>Register</h2>
+            <div class="form-group">
+                <label>User Type</label>
+                <select id="user-type" onchange="toggleDriverFields()">
+                    <option value="Rider">Rider</option>
+                    <option value="Driver">Driver</option>
+                </select>
+            </div>
+            
+            <!-- Common Fields -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <!-- Driver Specific Fields -->
+            <div id="driver-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="car-model">Car Model</label>
+                    <input type="text" id="car-model">
+                </div>
+                <div class="form-group">
+                    <label for="car-license">Car License</label>
+                    <input type="text" id="car-license">
+                </div>
+                <div class="form-group">
+                    <label for="seats">Available Seats</label>
+                    <input type="number" id="seats" min="1" max="4">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+            <p>Already have an account? <a href="/login">Login</a></p>
+        </form>
+    </div>
+    <script src="/static/js/register.js"></script>
+</body>
+</html>

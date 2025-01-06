@@ -1,0 +1,7 @@
+
+1.computer networks
+2.programming
+3.software design and analysis
+4.oop
+5.AI 
+6.ML

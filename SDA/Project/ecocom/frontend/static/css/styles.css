@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #0bb76f;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    color: #264653;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Call-to-Action Section */
+.cta {
+    margin-top: 20px;
+}
+
+.cta p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-buttons .btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #0bb76f;
+    color: white;
+    border: 2px solid #0bb76f;
+}
+
+.primary-btn:hover {
+    background-color: #21867a;
+    border-color: #21867a;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #0bb76f;
+    border: 2px solid #0bb76f;
+}
+
+.secondary-btn:hover {
+    background-color: #f0f4f8;
+    border-color: #21867a;
+    color: #21867a;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #666;
+}

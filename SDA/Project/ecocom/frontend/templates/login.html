@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EcoCommute</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <header class="header">
+        <h1>EcoCommute</h1>
+        <p>Carpooling for FAST University Students</p>
+    </header>
+    <main class="login-container">
+        <form id="login-form">
+            <h2>Welcome Back</h2>
+            <p>Share rides, save costs, and reduce your carbon footprint!</p>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label>User Type</label>
+                <select id="user-type">
+                    <option value="Driver">Driver</option>
+                    <option value="Rider">Rider</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <p class="register-text">Don't have an account? <a href="/register">Register here</a></p>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 EcoCommute - Together for a Greener Tomorrow</p>
+    </footer>
+    <script src="/static/js/login.js"></script>
+</body>
+</html>

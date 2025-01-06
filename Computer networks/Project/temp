@@ -1,0 +1,11 @@
+with open('FileSend.txt','r') as file:
+    data=file.read().lower()
+    data=data.split('.')
+    i=1
+    j=2
+    
+    while i<len(data):
+        print(data[i]+'.')
+        i+=1
+       
+        
